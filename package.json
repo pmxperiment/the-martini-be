@@ -1,0 +1,16 @@
+{
+  "name": "be-the-martini-app",
+  "version": "1.0.0",
+  "description": "film set generator",
+  "main": "app.js",
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "express": "^4.16.2"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Patrick",
+  "license": "ISC"
+}
