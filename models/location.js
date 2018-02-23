@@ -3,12 +3,11 @@ var mongoose = require('mongoose'),
     User = require('./User');
 
 var LocationSchema = new Schema({
-    location: String,
+    set_name: String,
     category: String,
     daily_fee: String,
     pic_url: String,
-    location_description: String,
-    user:[User.schema]
+    description: String
 });
 
 var Location = mongoose.model('Location', LocationSchema);
