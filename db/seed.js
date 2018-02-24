@@ -1,4 +1,4 @@
-var db = require('../models');
+var models = require('../models');
 
 
   LocationsList =[
@@ -24,7 +24,7 @@ var db = require('../models');
     description: 'Rooftop, 14 floors up. Rough urban feel to this rooftop. Great for action shots.'
   },
   {
-   set_name: 'Penthouse',
+   set_name: 'Dessert Home',
    category: 'Rural Area',
    daily_fee: '$100',
    pic_url: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTRHne29Q97PN32EmlD3ku9kl8GjAZzBRo2R9bmabed0AXEy63V',
@@ -59,7 +59,7 @@ models.Location.remove({}, function(err, res) {
       console.log('Error creating locations: ', err);
       return;
     }
-    console.log('Created', Locations.length, 'Location');
+    console.log('Created', Location.length, 'Location');
     return;
   })
 });
@@ -76,16 +76,17 @@ models.User.remove({}, function(err, res) {
 models.User.create([
 {
    name: 'Tom',
-   locations: [LocationsList[0], LocationsList[1]],
+   locations: [LocationsList[0], LocationsList[1], LocationsList[2]],
  },
 {
    name: 'Sam',
- locations: [LocationsList[2], LocationsList[3]]
+ locations: [LocationsList[3], LocationsList[4], LocationsList[5]]
 }], function(err, users) {
   if (err) {
     console.log('Error creating Users', err);
     return;
   }
-  console.log('Created', user.legnth, 'post');
-  return
+  console.log('Created', users.legnth, 'users');
+  process.exit();
+});
 });
