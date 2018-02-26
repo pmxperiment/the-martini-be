@@ -15,7 +15,7 @@ router.get('/api/locations', controller.index_locations);
 
 //routes locations
 router.post('/api/locations/', controller.create_location);
-router.get('/api/users/:location_id', controller.show_location);
+router.get('/api/locations/:location_id', controller.show_location);
 router.delete('/api/locations/:location_id', controller.delete_location)
 
 
