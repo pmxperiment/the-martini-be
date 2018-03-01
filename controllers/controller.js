@@ -44,6 +44,7 @@ function index_locations(req, res) {
 
 //POST a new location
 function create_location(req, res) {
+  console.log(req.body)
   Location.create(req.body, function(err, location) {
     if (err) { console.log('error', err); }
     res.json(location);

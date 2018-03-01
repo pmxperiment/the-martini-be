@@ -13,11 +13,12 @@ app.use(function(req, res, next) {
   res.header("Access-Control-Allow-Methods", "PUT,GET,POST,DELETE");
   next();
 });
-app.use(router);
+
 //bodyParser middleware
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: true}));
 
+app.use(router);
 
 // test data
 // var test1 = {
