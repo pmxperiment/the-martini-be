@@ -7,6 +7,7 @@ var LocationSchema = new Schema({
     category: String,
     daily_fee: String,
     pic_url: String,
+    contact_info: String,
     description: String
 });
 
