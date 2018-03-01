@@ -6,6 +6,12 @@ var path = require('path');
 var user = require('./models/User')
 
 
+//bodyParser middleware
+app.use(bodyParser.urlencoded({extended: true}));
+app.use(express.static('public'));
+app.use(bodyParser.json());
+
+
 
 app.use(function(req, res, next) {
   res.header("Access-Control-Allow-Origin", "*");
@@ -15,8 +21,8 @@ app.use(function(req, res, next) {
 });
 
 //bodyParser middleware
-app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({extended: true}));
+//app.use(bodyParser.json());
+//app.use(bodyParser.urlencoded({extended: true}));
 
 app.use(router);
 
