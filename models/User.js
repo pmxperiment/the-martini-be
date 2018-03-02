@@ -1,6 +1,6 @@
 var mongoose = require('mongoose'),
     Schema = mongoose.Schema,
-    Location = require('./Location');
+    Location = require('./location');
 
 var UserSchema = new Schema({
     name: String,
