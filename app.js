@@ -6,10 +6,6 @@ var path = require('path');
 var user = require('./models/User')
 
 
-//bodyParser middleware
-app.use(bodyParser.urlencoded({extended: true}));
-app.use(express.static('public'));
-app.use(bodyParser.json());
 
 
 //old cors
@@ -31,6 +27,13 @@ app.use(function(req, res, next) {
     next();
   }
 });
+
+//bodyParser middleware
+app.use(bodyParser.urlencoded({extended: true}));
+app.use(express.static('public'));
+app.use(bodyParser.json());
+
+
 
 app.options('/*', function(req, res, next){
   res.header('Access-Control-Allow-Origin', '*');
