@@ -1,5 +1,8 @@
 var express = require('express');
 var app = express();
+
+var mongoose = require('mongoose');
+
 var router = require('./db/routes.js');
 var bodyParser = require('body-parser');
 var path = require('path');
@@ -30,7 +33,8 @@ app.use(function(req, res, next) {
 
 //bodyParser middleware
 app.use(bodyParser.urlencoded({extended: true}));
-app.use(express.static('public'));
+//comenting out public
+//app.use(express.static('public'));
 app.use(bodyParser.json());
 
 
